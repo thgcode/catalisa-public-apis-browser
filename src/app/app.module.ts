@@ -10,6 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { StatusComponent } from './components/status/status.component';
 
+import { PublicAPIsService } from './services/public-apis.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,9 @@ import { StatusComponent } from './components/status/status.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    PublicAPIsService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

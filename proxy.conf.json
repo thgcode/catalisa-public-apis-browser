@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "https://api.publicapis.org/",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
