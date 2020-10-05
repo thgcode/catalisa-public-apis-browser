@@ -31,6 +31,10 @@ export class PublicAPIsService {
     return this.getFromAPI <PublicAPIsHealthStatus>('health');
   }
 
+  public getCategories(): Observable <string[]> {
+    return this.getFromAPI <string []>('categories');
+  }
+
   private handleError(error: HttpErrorResponse) {
     return throwError(error);
   }

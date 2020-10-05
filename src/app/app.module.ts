@@ -11,6 +11,7 @@ import { SearchComponent } from './components/search/search.component';
 import { StatusComponent } from './components/status/status.component';
 
 import { PublicAPIsService } from './services/public-apis.service';
+import { CategoriesComponent } from './components/categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PublicAPIsService } from './services/public-apis.service';
     HeaderComponent,
     HomeComponent,
     SearchComponent,
-    StatusComponent
+    StatusComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
