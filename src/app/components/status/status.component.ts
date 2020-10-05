@@ -17,6 +17,7 @@ export class StatusComponent implements OnInit {
   constructor(private publicAPIsService: PublicAPIsService) { }
 
   ngOnInit(): void {
+    document.getElementById('content').focus();
     this.errorObject = null;
     this.status$ = this.publicAPIsService.getAPIHealthStatus().pipe(
       catchError(err => {

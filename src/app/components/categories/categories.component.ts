@@ -17,6 +17,7 @@ export class CategoriesComponent implements OnInit {
   constructor(private publicAPIsService: PublicAPIsService) { }
 
   ngOnInit(): void {
+    document.getElementById('content').focus();
   this.errorObject = null;
     this.categories$ = this.publicAPIsService.getCategories().pipe(
       catchError(err => {
