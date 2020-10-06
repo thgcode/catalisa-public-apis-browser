@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 
 import { PublicAPIsHealthStatus } from '../models/public-apis-health-status';
+import { PublicAPIsSearchQuery } from '../models/public-apis-search-query';
+import { PublicAPIsSearchResults } from '../models/public-apis-search-results';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +26,7 @@ export class PublicAPIsService {
     return this.httpClient.get <T>(`${this.baseURL}${APIFunction}`)
       .pipe(
         retry(2),
-        catchError(this.handleError))
+        catchError(this.handleError));
   }
 
   public getAPIHealthStatus(): Observable <PublicAPIsHealthStatus> {
@@ -33,6 +35,12 @@ export class PublicAPIsService {
 
   public getCategories(): Observable <string[]> {
     return this.getFromAPI <string []>('categories');
+  }
+
+  public searchEntries(query: PublicAPIsSearchQuery): Observable <PublicAPIsSearchResults> {
+    let params: HttpParams = new HttpParams({fromObject: query});
+    let paramsString: string = params.toString();
+    return this.getFromAPI <PublicAPIsSearchResults>(`entries?${paramsString}`);
   }
 
   private handleError(error: HttpErrorResponse) {

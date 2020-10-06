@@ -12,6 +12,8 @@ import { StatusComponent } from './components/status/status.component';
 
 import { PublicAPIsService } from './services/public-apis.service';
 import { CategoriesComponent } from './components/categories/categories.component';
+import { ViewAPIsComponent } from './components/view-apis/view-apis.component';
+import { ShowCategoryComponent } from './components/show-category/show-category.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CategoriesComponent } from './components/categories/categories.componen
     HomeComponent,
     SearchComponent,
     StatusComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    ViewAPIsComponent,
+    ShowCategoryComponent
   ],
   imports: [
     BrowserModule,

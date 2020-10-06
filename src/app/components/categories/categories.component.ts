@@ -12,13 +12,13 @@ import { PublicAPIsService } from '../../services/public-apis.service';
 export class CategoriesComponent implements OnInit {
   public categories$: Observable <string []>;
   public errorObject;
-  private baseCategoryViewURL: string = 'category/';
+  private baseCategoryViewURL: string = '/category/';
 
   constructor(private publicAPIsService: PublicAPIsService) { }
 
   ngOnInit(): void {
     document.getElementById('content').focus();
-  this.errorObject = null;
+    this.errorObject = null;
     this.categories$ = this.publicAPIsService.getCategories().pipe(
       catchError(err => {
         this.errorObject = err;

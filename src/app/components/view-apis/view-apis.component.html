@@ -1,0 +1,10 @@
+<div id="apis-list" *ngIf="results; else loading">
+<p>Showing {{results.count}} entries.</p>
+  <ul>
+    <li *ngFor="let entry of results.entries" class="api-entry">
+      <a href="{{entry.Link}}">{{entry.API}}</a>
+      {{entry.Description}}
+    </li>
+  </ul>
+</div>
+<ng-template #loading>Loading...</ng-template>

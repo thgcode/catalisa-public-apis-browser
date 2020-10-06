@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { StatusComponent } from './components/status/status.component';
+import { ShowCategoryComponent } from './components/show-category/show-category.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
     path: 'status',
     component: StatusComponent,
   },
+  {
+    path: 'category/:category',
+    component: ShowCategoryComponent,
+  }
 ];
 
 @NgModule({
