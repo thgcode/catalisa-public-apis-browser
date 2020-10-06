@@ -9,6 +9,7 @@ import { PublicAPIsSearchResults } from '../../models/public-apis-search-results
 })
 export class ViewAPIsComponent implements OnInit {
   public results: PublicAPIsSearchResults;
+  public errorObject;
 
   constructor() { }
 

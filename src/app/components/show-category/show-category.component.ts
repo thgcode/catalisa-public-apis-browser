@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 
 import { ViewAPIsComponent } from '../view-apis/view-apis.component';
+import { PublicAPIsSearchQuery } from '../../models/public-apis-search-query';
 import { PublicAPIsSearchResults } from '../../models/public-apis-search-results';
 import { PublicAPIsService } from '../../services/public-apis.service';
 
@@ -13,27 +14,34 @@ import { PublicAPIsService } from '../../services/public-apis.service';
 })
 export class ShowCategoryComponent implements OnInit {
   public category: string;
-  public errorObject;
 
-  @ViewChild(ViewAPIsComponent)
   private viewAPIsComponent: ViewAPIsComponent;
+  @ViewChild(ViewAPIsComponent, { 'static': false }) set content(content: ViewAPIsComponent) {
+    if(content) { // Hack to get search when the results component is displayed
+      this.viewAPIsComponent = content;
+      this.search();
+    }
+  }
 
   constructor(private route: ActivatedRoute, private publicAPIsService: PublicAPIsService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.category = decodeURI(params['category']);
-      this.search();
     });
   }
 
   private search() {
-    this.errorObject = null;
-    this.publicAPIsService.searchEntries({category: this.category}).subscribe(
+    this.viewAPIsComponent.errorObject = null;
+    let query: PublicAPIsSearchQuery = {};
+    if (this.category != 'All') {
+      query.category = this.category;
+    }
+    this.publicAPIsService.searchEntries(query).subscribe(
       (results) => {
         this.viewAPIsComponent.results = results;
       }, (error) => {
-        this.errorObject = error;
+        this.viewAPIsComponent.errorObject = error;
       }
     );
   }

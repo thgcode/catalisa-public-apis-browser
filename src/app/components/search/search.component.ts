@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 
 import { ViewAPIsComponent } from '../view-apis/view-apis.component';
 import { PublicAPIsSearchResults } from '../../models/public-apis-search-results';
@@ -12,22 +12,24 @@ import { PublicAPIsService } from '../../services/public-apis.service';
 })
 export class SearchComponent implements OnInit {
 
-  @ViewChild(ViewAPIsComponent)
   private viewAPIsComponent: ViewAPIsComponent;
+  @ViewChild(ViewAPIsComponent, { 'static': false }) set content(content: ViewAPIsComponent) {
+    if(content) { // Hack to get search when the results component is displayed
+      this.viewAPIsComponent = content;
+      this.do_search();
+    }
+  }
 
   public searchFor: string;
   public searching: boolean;
-  public errorObject;
 
   constructor(private publicAPIsService: PublicAPIsService) { }
 
   ngOnInit(): void {
-    this.searching = false;
   }
 
-  public search() {
-    this.errorObject = null;
-    this.searching = true;
+  public do_search() {
+    this.viewAPIsComponent.errorObject = null;
     let query = {
       title: this.searchFor,
     };
@@ -35,8 +37,16 @@ export class SearchComponent implements OnInit {
       (results) => {
         this.viewAPIsComponent.results = results;
       }, (error) => {
-        this.errorObject = error;
+        this.viewAPIsComponent.errorObject = error;
+        throwError(error);
       }
     );
+  }
+
+  public search() {
+    this.searching = true;
+    if (this.viewAPIsComponent) {
+      this.do_search();
+    }
   }
 }

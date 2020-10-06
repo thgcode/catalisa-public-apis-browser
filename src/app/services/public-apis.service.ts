@@ -40,7 +40,10 @@ export class PublicAPIsService {
   public searchEntries(query: PublicAPIsSearchQuery): Observable <PublicAPIsSearchResults> {
     let params: HttpParams = new HttpParams({fromObject: query});
     let paramsString: string = params.toString();
-    return this.getFromAPI <PublicAPIsSearchResults>(`entries?${paramsString}`);
+    if (paramsString != "") {
+      paramsString = `?${paramsString}`;
+    }
+    return this.getFromAPI <PublicAPIsSearchResults>(`entries${paramsString}`);
   }
 
   private handleError(error: HttpErrorResponse) {
