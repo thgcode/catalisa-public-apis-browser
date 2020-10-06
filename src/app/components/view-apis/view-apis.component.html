@@ -1,5 +1,5 @@
 <div id="apis-list" *ngIf="results; else loading">
-<p>Showing {{results.count}} entries.</p>
+<p aria-live="assertive">Showing {{results.count}} entries.</p>
   <ul>
     <li *ngFor="let entry of results.entries" class="api-entry">
       <a href="{{entry.Link}}">{{entry.API}}</a>
