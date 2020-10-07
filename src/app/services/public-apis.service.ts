@@ -14,7 +14,7 @@ export class PublicAPIsService {
   /* Since I couldn't get the Public APIs' base URL to work with CORS, I set up
     the base URL of the service as an Angular proxy that will forward the request
     to Public APIs itself. If I manage to get CORS to work, this proxy can be removed without problems. */
-  private baseURL = 'http://localhost:4200/api/';
+  private baseURL = '/api/';
 
   constructor(private httpClient: HttpClient) { }
 
