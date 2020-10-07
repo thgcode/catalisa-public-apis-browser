@@ -26,6 +26,7 @@ export class ShowCategoryComponent implements OnInit {
   constructor(private route: ActivatedRoute, private publicAPIsService: PublicAPIsService) { }
 
   ngOnInit(): void {
+    document.getElementById('content').focus();
     this.route.params.subscribe((params) => {
       this.category = decodeURI(params.category);
     });
