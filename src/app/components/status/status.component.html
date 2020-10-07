@@ -1,14 +1,14 @@
-<h2>API status</h2>
+<h2 i18n>API status</h2>
 <div id="api-status" aria-live="assertive">
   <ng-container *ngIf="status$ | async as status; else loadingOrError">
-    <p *ngIf="status.alive; else notAlive">Public APIs is alive.</p>
-    <ng-template #notAlive>Public APIs is not alive.</ng-template>
+    <p i18n *ngIf="status.alive; else notAlive">Public APIs is alive.</p>
+    <ng-template i18n #notAlive>Public APIs is not alive.</ng-template>
   </ng-container>
   <ng-template #loadingOrError>
-    <ng-container *ngIf="errorObject; else loading">
+    <ng-container i18n *ngIf="errorObject; else loading">
       Error while trying to check API status: {{ errorObject.message }}
     </ng-container>
-    <ng-template #loading>
+    <ng-template i18n #loading>
       Checking status...
     </ng-template>
   </ng-template>

@@ -13,8 +13,8 @@ import { PublicAPIsService } from '../../services/public-apis.service';
 export class SearchComponent implements OnInit {
 
   private viewAPIsComponent: ViewAPIsComponent;
-  @ViewChild(ViewAPIsComponent, { 'static': false }) set content(content: ViewAPIsComponent) {
-    if(content) { // Hack to get search when the results component is displayed
+  @ViewChild(ViewAPIsComponent, { static: false }) set content(content: ViewAPIsComponent) {
+    if (content) { // Hack to get search when the results component is displayed
       this.viewAPIsComponent = content;
       this.do_search();
     }
@@ -28,9 +28,9 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public do_search() {
+  public do_search(): void {
     this.viewAPIsComponent.errorObject = null;
-    let query = {
+    const query = {
       title: this.searchFor,
     };
     this.publicAPIsService.searchEntries(query).subscribe(
@@ -43,7 +43,7 @@ export class SearchComponent implements OnInit {
     );
   }
 
-  public search() {
+  public search(): void {
     this.searching = true;
     if (this.viewAPIsComponent) {
       this.do_search();

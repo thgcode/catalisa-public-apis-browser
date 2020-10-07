@@ -9,10 +9,18 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "pt": "src/locale/pt/messages.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": false,
+            "aot": true,
             "outputPath": "dist/catalisa-public-apis-browser-angular",
             "index": "src/index.html",
             "main": "src/main.ts",

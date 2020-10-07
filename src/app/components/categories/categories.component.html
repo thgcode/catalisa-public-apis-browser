@@ -1,4 +1,4 @@
-<h2>Categories list</h2>
+<h2 i18n>Categories list</h2>
 <div id="categories-list">
   <ng-container *ngIf="categories$ | async as categories; else loadingOrError">
     <ul>
@@ -8,10 +8,10 @@
     </ul>
   </ng-container>
   <ng-template #loadingOrError>
-    <ng-container *ngIf="errorObject; else loading">
+    <ng-container i18n *ngIf="errorObject; else loading">
       Error while trying to get categories: {{ errorObject.message }}
     </ng-container>
-    <ng-template #loading>
+    <ng-template i18n #loading>
       Getting the categories...
     </ng-template>
   </ng-template>

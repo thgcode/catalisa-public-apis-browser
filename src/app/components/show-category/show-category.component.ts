@@ -16,8 +16,8 @@ export class ShowCategoryComponent implements OnInit {
   public category: string;
 
   private viewAPIsComponent: ViewAPIsComponent;
-  @ViewChild(ViewAPIsComponent, { 'static': false }) set content(content: ViewAPIsComponent) {
-    if(content) { // Hack to get search when the results component is displayed
+  @ViewChild(ViewAPIsComponent, { static: false }) set content(content: ViewAPIsComponent) {
+    if (content) { // Hack to get search when the results component is displayed
       this.viewAPIsComponent = content;
       this.search();
     }
@@ -27,14 +27,14 @@ export class ShowCategoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
-      this.category = decodeURI(params['category']);
+      this.category = decodeURI(params.category);
     });
   }
 
-  private search() {
+  private search(): void {
     this.viewAPIsComponent.errorObject = null;
-    let query: PublicAPIsSearchQuery = {};
-    if (this.category != 'All') {
+    const query: PublicAPIsSearchQuery = {};
+    if (this.category !== 'All') {
       query.category = this.category;
     }
     this.publicAPIsService.searchEntries(query).subscribe(

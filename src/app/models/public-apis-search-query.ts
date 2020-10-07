@@ -9,4 +9,4 @@ export type PublicAPIsSearchQuery = {
   https?: string;
   cors?: string;
   category?: string;
-}
+};

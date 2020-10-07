@@ -12,7 +12,7 @@ import { PublicAPIsService } from '../../services/public-apis.service';
 export class CategoriesComponent implements OnInit {
   public categories$: Observable <string []>;
   public errorObject;
-  private baseCategoryViewURL: string = '/category/';
+  private baseCategoryViewURL = '/category/';
 
   constructor(private publicAPIsService: PublicAPIsService) { }
 

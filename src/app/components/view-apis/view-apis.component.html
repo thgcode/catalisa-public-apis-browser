@@ -1,5 +1,7 @@
 <div id="apis-list" *ngIf="results; else loading">
-  <p id="search-results-message" aria-live="assertive" *ngIf="results;">Showing {{results.count}} entries.</p>
+  <p id="search-results-message" i18n aria-live="assertive" *ngIf="results;">
+    Showing {{results.count}} entries.
+  </p>
   <ul *ngIf="results.entries">
     <li *ngFor="let entry of results.entries" class="api-entry">
       <a href="{{entry.Link}}">{{entry.API}}</a>
@@ -8,6 +10,8 @@
   </ul>
 </div>
 <ng-template #loading>
-  <ng-container *ngIf="!errorObject; else error">Loading...</ng-container>
-  <ng-template #error>An error occurred while getting the APIs: {{errorObject.message}}</ng-template>
+  <ng-container i18n *ngIf="!errorObject; else error">Loading...</ng-container>
+  <ng-template i18n #error>
+    An error occurred while getting the APIs: {{errorObject.message}}
+  </ng-template>
 </ng-template>

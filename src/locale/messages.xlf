@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="db38f3b171906b5314484ca0f729fb55244d4788" datatype="html">
+        <source>Skip to content</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/header/header.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="92eee6be6de0b11c924e3ab27db30257159c0a7c" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/header/header.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4c9330be865467ecdb5e14c4b0c0d467b893c12d" datatype="html">
+        <source>APIs by category</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/header/header.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="acde308f8f50b2fe462f76cfb1c65b61d6c60a9c" datatype="html">
+        <source>All APIs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/header/header.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4b2dbd760cf1ae31f1e2ee32b7cca6c967701fa8" datatype="html">
+        <source>API status</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/header/header.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/status/status.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="10cec4ba15108b80cdb6b5284560bf0dd056f80f" datatype="html">
+        <source>Welcome to the public APIs browser app!
+  Use the links on the navigation bar to select API categories, or use the
+search box to search for specific criteria.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f6265ba91f99e179790e99fd37aa48733c37b382" datatype="html">
+        <source>
+    Showing <x id="INTERPOLATION" equiv-text="{{results.count}}"/> entries.
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view-apis/view-apis.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="94516fa213706c67ce5a5b5765681d7fb032033a" datatype="html">
+        <source>Loading...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view-apis/view-apis.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8ff3b2345452349cdc720d609856e2e6d5327cfc" datatype="html">
+        <source>
+    An error occurred while getting the APIs: <x id="INTERPOLATION" equiv-text="{{errorObject.message}}"/>
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view-apis/view-apis.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="89455c6f1e9af43e7aa2db861f29efa8bdf588cb" datatype="html">
+        <source>s</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search/search.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="218ff6939fdee43f57b42a526094e611eb08172a" datatype="html">
+        <source>Search for:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search/search.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7e892ba15f2c6c17e83510e273b3e10fc32ea016" datatype="html">
+        <source>Search</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/search/search.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="49825ed271a923c9a4b5361a004ebf41a7606b80" datatype="html">
+        <source>Public APIs is alive.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/status/status.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="42ec6d2ad836fa704c9a629ce8023be7cc66834b" datatype="html">
+        <source>Public APIs is not alive.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/status/status.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="45a364bce1ebbcc4d59206714bf44af08aba3e9b" datatype="html">
+        <source>
+      Error while trying to check API status: <x id="INTERPOLATION" equiv-text="{{ errorObject.message }}"/>
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/status/status.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="69d0c236727b9674fce463342d16a4e57b597910" datatype="html">
+        <source>
+      Checking status...
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/status/status.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="83df341271fe9c6e831d4c148a0811d98ddf3076" datatype="html">
+        <source>Categories list</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/categories/categories.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d033c8b8c697386fe2acb37a19b96310418dfe3e" datatype="html">
+        <source>
+      Error while trying to get categories: <x id="INTERPOLATION" equiv-text="{{ errorObject.message }}"/>
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/categories/categories.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f05395deb0324dc3b7af866803a08d18103b6322" datatype="html">
+        <source>
+      Getting the categories...
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/categories/categories.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

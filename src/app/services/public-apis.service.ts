@@ -14,13 +14,13 @@ export class PublicAPIsService {
   /* Since I couldn't get the Public APIs' base URL to work with CORS, I set up
     the base URL of the service as an Angular proxy that will forward the request
     to Public APIs itself. If I manage to get CORS to work, this proxy can be removed without problems. */
-  private baseURL: string = 'http://localhost:4200/api/';
+  private baseURL = 'http://localhost:4200/api/';
 
   constructor(private httpClient: HttpClient) { }
 
   private requestOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  }
+  };
 
   private getFromAPI <T>(APIFunction: string): Observable <T> {
     return this.httpClient.get <T>(`${this.baseURL}${APIFunction}`)
@@ -38,9 +38,9 @@ export class PublicAPIsService {
   }
 
   public searchEntries(query: PublicAPIsSearchQuery): Observable <PublicAPIsSearchResults> {
-    let params: HttpParams = new HttpParams({fromObject: query});
+    const params: HttpParams = new HttpParams({fromObject: query});
     let paramsString: string = params.toString();
-    if (paramsString != "") {
+    if (paramsString !== '') {
       paramsString = `?${paramsString}`;
     }
     return this.getFromAPI <PublicAPIsSearchResults>(`entries${paramsString}`);
