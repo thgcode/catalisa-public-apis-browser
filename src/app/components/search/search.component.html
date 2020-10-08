@@ -1,7 +1,7 @@
 <div id="search">
-  <form role="search">
-    <input type="text" i18n-accesskey accesskey="s" i18n-title title="Search for:" name="searchFor" [(ngModel)]="searchFor">
-    <button i18n (click)="search()">Search</button>
+  <form role="search" class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="text" i18n-accesskey accesskey="s" i18n-title title="Search for:" name="searchFor" [(ngModel)]="searchFor">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" i18n (click)="search()">Search</button>
   </form>
 </div>
 <app-view-apis *ngIf="searching"></app-view-apis>
