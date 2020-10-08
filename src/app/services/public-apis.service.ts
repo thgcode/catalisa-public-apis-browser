@@ -16,11 +16,11 @@ export class PublicAPIsService {
     to Public APIs itself. If I manage to get CORS to work, this proxy can be removed without problems. */
   private baseURL = '/api/';
 
-  constructor(private httpClient: HttpClient) { }
-
   private requestOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
+
+  constructor(private httpClient: HttpClient) { }
 
   private getFromAPI <T>(APIFunction: string): Observable <T> {
     return this.httpClient.get <T>(`${this.baseURL}${APIFunction}`)

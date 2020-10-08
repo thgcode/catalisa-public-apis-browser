@@ -12,6 +12,9 @@ import { PublicAPIsService } from '../../services/public-apis.service';
 })
 export class SearchComponent implements OnInit {
 
+  public searchFor: string;
+  public searching: boolean;
+
   private viewAPIsComponent: ViewAPIsComponent;
   @ViewChild(ViewAPIsComponent, { static: false }) set content(content: ViewAPIsComponent) {
     if (content) { // Hack to get search when the results component is displayed
@@ -19,9 +22,6 @@ export class SearchComponent implements OnInit {
       this.do_search();
     }
   }
-
-  public searchFor: string;
-  public searching: boolean;
 
   constructor(private publicAPIsService: PublicAPIsService) { }
 
