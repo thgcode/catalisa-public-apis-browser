@@ -15,7 +15,7 @@
         <target>Pular para o conteúdo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/header/header.component.html</context>
-          <context context-type="linenumber">2</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="92eee6be6de0b11c924e3ab27db30257159c0a7c" datatype="html">
@@ -44,6 +44,10 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/header/header.component.html</context>
           <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/show-category/show-category.component.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4b2dbd760cf1ae31f1e2ee32b7cca6c967701fa8" datatype="html">
@@ -198,6 +202,16 @@ a caixa de pesquisa para pesquisar termos mais específicos.</target>
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="a743e33c717451fc7331465528e9e9c5b781a498" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{category}}"/> category</source>
+        <target>Categoria <x id="INTERPOLATION"
+equiv-text="{{category}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/show-category/show-category.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>
