@@ -12,4 +12,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public skipToContent(): void {
+    document.getElementById('content').focus();
+  }
 }
