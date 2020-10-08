@@ -16,7 +16,7 @@ This app also includes language support. Only one language is supported for now
 (Portuguese). I'll gladly accept pull request translations or code
 contributions for this app when the challenge ends completely. To test the app in
 another language, change the `"localize": false,` to your language of choice, for example
-            `"localize": ["pt"].
+            `"localize": ["pt"]`.
 
 ## Build
 
